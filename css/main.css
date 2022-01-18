@@ -1,0 +1,145 @@
+/*Guardar variáveis no css*/
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+
+    /*Os elementos não irá ultrapassar a borda da caixa*/
+    box-sizing: border-box;
+}
+
+/* Elementos base */
+body{
+    background-color: var(--preto);
+
+    /* Fontes do nosso projeto */
+    font-family: 'Times New Roman', Times, serif;
+
+    color: white;
+}
+
+header .container{
+    
+    /* Nos permite tilizar o text box */
+    display: flex;
+
+    flex-direction: row;
+
+    /* Alinhar os elementos */
+    align-items: center;
+
+    /* Trabalha os elementos de maneira horizontal
+       colocando espaço entre eles 
+    */
+    justify-content: space-between;
+
+}
+
+header .logo{
+    /* "Degrudar" a logo da página colocando mais para esquerda */
+    margin-left: 5px; 
+
+    color: var(--vermelho);
+    /* Fonte principal e fonte secundária caso o navegador
+    do usuário não suporte */
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    /* Remove as linhas de baixo dos links */
+    text-decoration: none;
+
+    color: #AAA;
+    margin-right: 10px;
+}
+
+/* Evento para quando o mouse estiver "em cima" */
+header nav a:hover{
+    color: #fff;
+}
+
+/* Filme principal */
+.filme-principal{
+    font-size: 16px;
+
+    /* linear-gradient() graditente de cores */
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50) 100%), url('/img/hotel-transilvania.jpg');
+
+    /* Tamanho para a caixa do filme principal */
+    height: 400px;
+    width: 100%;
+    /* Área de cobertura da nossa caixa */
+    background-size: cover;
+    /* Joga os elementos para baixo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, .50);
+    /* Retira as bordas dos botões */
+    border: none;
+
+    color: #AAA;
+
+    /* Espaço interno */
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+/*
+
+Wrapper = envelopar
+
+*/
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 10px;
+}
